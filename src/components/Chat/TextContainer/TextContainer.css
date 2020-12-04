@@ -1,0 +1,13 @@
+.textContainer {
+  width: 30%;
+  background-color: #c4c4f0;
+  height: 100%;
+  padding: 5% 2%;
+  border-left: 1px solid #060633;
+  color: #1b1a1a;
+}
+
+.users {
+  text-transform: uppercase;
+  font-weight: 550;
+}
