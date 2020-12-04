@@ -58,18 +58,24 @@ const Chat = ({ location }) => {
   console.log("room data", users);
 
   return (
-    <div className="outerContainer">
-      <div className="container">
-        <InfoBar room={room} name={name} />
-        <Messages messages={messages} name={name} />
-        <Input
-          message={message}
-          setMessage={setMessage}
-          sendMessage={sendMessage}
-        />
-      </div>
-      <TextContainer users={users} />
-    </div>
+    <>
+      {name && room ? (
+        <div className="outerContainer">
+          <div className="container">
+            <InfoBar room={room} name={name} />
+            <Messages messages={messages} name={name} />
+            <Input
+              message={message}
+              setMessage={setMessage}
+              sendMessage={sendMessage}
+            />
+          </div>
+          <TextContainer users={users} />
+        </div>
+      ) : (
+        <h1>Please login with username and room name</h1>
+      )}
+    </>
   );
 };
 
